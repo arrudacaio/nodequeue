@@ -1,3 +1,4 @@
+import Mail from '../lib/Mail'
 
 class UserController {
 
@@ -10,6 +11,13 @@ class UserController {
       email,
       password
     }
+
+    await Mail.sendMail({
+      from: 'Queue test <queueTest@google.com',
+      to: `${name} <${email}>`,
+      subject: 'Cadastro de usuario',
+      html: 'Olá bem vindo ao nosso sistema, seu cadastro foi realizado com sucesso.'
+    })
 
     // Após o cadastro do usuário, iremos enviar um email para ele. 
 

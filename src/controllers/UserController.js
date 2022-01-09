@@ -12,7 +12,7 @@ class UserController {
     }
 
     // Adicionar o job de RegisterMail na fila.
-    await Queue.add({ user })
+    await Queue.add('RegisterMail', { user })
 
     // Após o cadastro do usuário, iremos enviar um email para ele. 
 

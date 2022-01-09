@@ -3,6 +3,6 @@
 // mas sim a instancia da fila, que startamos com yarn dev:queue
 import 'dotenv/config'
 import Queue from './lib/Queue'
-import RegisterMail from './jobs/RegisterMail'
 
-Queue.process(RegisterMail.handle)
+// Vai processar todas as filas.
+Queue.process()

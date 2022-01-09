@@ -4,6 +4,7 @@
   "main": "index.js",
   "author": "Caio Arruda <caio.arruda@ccc.ufcg.edu.br>",
   "scripts": {
+    "dev": "npm-run-all -p dev:*",
     "dev:server": "nodemon src/server.js",
     "dev:queue": "nodemon src/queue.js"
   },

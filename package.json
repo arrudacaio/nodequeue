@@ -1,0 +1,7 @@
+{
+  "name": "nodequeue",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Caio Arruda <caio.arruda@ccc.ufcg.edu.br>",
+  "license": "MIT"
+}

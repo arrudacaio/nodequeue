@@ -1,5 +1,4 @@
-import Mail from '../lib/Mail'
-
+import Queue from '../lib/Queue'
 class UserController {
 
   async store(req, res) {
@@ -12,12 +11,8 @@ class UserController {
       password
     }
 
-    await Mail.sendMail({
-      from: 'Queue test <queueTest@google.com',
-      to: `${name} <${email}>`,
-      subject: 'Cadastro de usuario',
-      html: 'Olá bem vindo ao nosso sistema, seu cadastro foi realizado com sucesso.'
-    })
+    // Adicionar o job de RegisterMail na fila.
+    await Queue.add({ user })
 
     // Após o cadastro do usuário, iremos enviar um email para ele. 
 
